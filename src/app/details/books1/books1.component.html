@@ -1,0 +1,31 @@
+<table class="table">
+    <thead>
+     <tr>
+       <th scope="col">#</th>
+       <th scope="col">Name</th>
+       <th scope="col">FatherName</th>
+       <th scope="col">MotherName</th>
+       <th scope="col">ADDRESS</th>
+        <th scope="col">PIN</th>
+        <th scope="col">MOBILE</th>
+     </tr>
+    </thead>
+    <tbody *ngIf="books">
+        <tr *ngFor="let book of books; index as i">
+          <th scope="row">{{ i+1 }}</th>
+          <td>{{ book.cname }}</td>
+          <td>{{ book.fname }}</td>
+          <td>{{ book.mname }}</td>
+          <td>{{ book.address }}</td>
+          <td>{{ book.pin }}</td>
+          <td>{{ book.number }}</td>
+          <td>
+            <i class="bi bi-pencil-square" style="color: green;" 
+               (click)="editModal1(book)">EDIT</i>
+          </td>
+          <td>
+            <i class="bi bi-trash" (click)="deleteBook1(book)" style="color: red;">DELETE</i>
+          </td>
+        </tr>
+       </tbody>
+  </table>

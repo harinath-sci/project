@@ -1,0 +1,26 @@
+<div *ngIf="book" class="container">
+    <h4>Edit book record</h4>
+    <form #bookForm="ngForm" (ngSubmit)="onUpdate()" novalidate>
+        <div class="mb-3">
+            <label>Name</label>
+            <input class="form-control" name="name" #name="ngModel" #nameCtrl="ngModel"  
+            [(ngModel)]="book.name" placeholder="Name" required>
+        </div>
+        <div class="mb-3">
+            <label>IFSC</label>
+            <input class="form-control" name="ifsc" #name="ngModel" #ifscCtrl="ngModel" 
+            [(ngModel)]="book.ifsc" placeholder="IFSC" required>
+        </div>
+        <div class="mb-3">
+            <label>ACCOUNT</label>
+            <input class="form-control" name="account" #name="ngModel" #accountCtrl="ngModel" 
+            [(ngModel)]="book.account" placeholder="ACCOUNT" required>
+        </div>
+        <div class="mb-3">
+            <button type="submit" class="btn btn-primary" 
+            [disabled]="!bookForm.valid">
+            CREATE</button>
+        &nbsp;&nbsp;&nbsp;&nbsp;
+        </div>
+    </form>
+</div>

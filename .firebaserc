@@ -1,0 +1,14 @@
+{
+  "targets": {
+    "faculty-selection-process": {
+      "hosting": {
+        "u3": [
+          "faculty-selection-process"
+        ]
+      }
+    }
+  },
+  "projects": {
+    "default": "faculty-selection-process"
+  }
+}
